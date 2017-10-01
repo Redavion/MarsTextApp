@@ -9,6 +9,7 @@
 
 
     <!-- These are your CSS files -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" >
     <link rel="stylesheet" href="style.css" type="text/css">
    
 </head>
@@ -18,11 +19,11 @@
 
         <!-- Begin left half of website !-->
         <div class="content" id="sidebar">
-                <h1>Text Mars Pics!</h1>
+                <div class="typewriter"><h1 id ="header">Text Mars Pics!</h1></div>
             
                 <br>
                 <p>Get a picture taken by a Mars Rover on this date</p>
-                <input id="date" placeholder="YYYY-MM-DD" id="date">
+                <input id="date" placeholder="YYYY-MM-DD">
                 <select id="camera">
                     <option value="" disabled selected>Camera</option>                        
                     <option value='fhaz'>fhaz</option>
@@ -30,7 +31,7 @@
                     <!-- need more options-->
                   
                 </select>
-                <button>Get Pic</button>
+                <button onclick="getNasaPhoto()" >Get Pic</button>
 
                 <br>
                 <br>
@@ -38,14 +39,14 @@
                 <p>Text that photo</p>
                 <input placeholder="What number?" id="phone">
                 <input placeholder="Text content" id="text-content">
-                <button id="send-text" disabled>Text the photo</button>
+                <button onclick="sendNasaPhoto()" id="send-text" disabled>Text the photo</button>
         </div>
         <!-- End left half -->
 
         <!-- Begin right half of website !-->
         <div class="content" id="picture">
 
-            <img src="https://pi.tedcdn.com/r/tedideas.files.wordpress.com/2016/04/featured_art_fellows_art.jpg?" id="mars" height=500px>
+            <img src="https://media.salon.com/2015/09/mars-614x412.jpg" id="mars"height=500px>
         </div>
         <!-- End right half !-->
 
