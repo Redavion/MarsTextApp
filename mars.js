@@ -25,6 +25,8 @@ function getNasaPhoto() {
     let setImage = function(data) {
         image.src = data.photos[0].img_src; // sets the pic on the page
         document.getElementById('send-text').disabled =false; // disables the button to text the pic
+    
+
     };
 
     // makes the actual GET request
@@ -58,8 +60,8 @@ function textNasaPhoto() {
 
     // sets our username and password to the correct things
     // we technically don't need these lines of code but they make the 'beforeSend' function clearer
-    let username = "TWILIO ACCOUNT SID";
-    let password = "TWILIO API KEY";
+    let username = twilio.accountSid;
+    let password = twilio.apiKey;
 
     
     $.ajax({
